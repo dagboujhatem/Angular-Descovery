@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="offset-1 col-md-10">
+        <h1 class="text-center text-primary my-5">Employee list</h1>
+        <table class="table table-hover table-striped table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Age</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let employee of employees">
+                <th>{{ employee?.id }}</th>
+                <td>{{ employee?.firstName }}</td>
+                <td>{{ employee?.lastName }}</td>
+                <td>{{ employee?.email }}</td>
+                <td>{{ employee?.age }}</td>
+                <td>{{ employee?.salary }}</td>
+                <td>
+                    <button class="btn btn-info text-white me-1" [routerLink]="['/update', employee?.id]">
+                      <i class="fa fa-edit"></i> Update
+                    </button>
+                    <button class="btn btn-danger" (click)="deleteEmployee(employee?.id)">
+                      <i class="fa fa-trash"></i> Delete
+                    </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

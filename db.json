@@ -1,0 +1,13 @@
+{
+  "employees": [
+    {
+      "firstName": "dagbouj",
+      "lastName": "hatem",
+      "email": "dagboujhatem@gmail.com",
+      "password": "vffff",
+      "age": 85,
+      "salary": "858",
+      "id": 1
+    }
+  ]
+}
